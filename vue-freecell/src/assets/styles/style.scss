@@ -1,0 +1,34 @@
+.pocker{
+    width: 87px;
+    height: 133px;
+    background:url(../image/freecell.png) no-repeat;
+}
+
+@mixin pockerStyle($classname) {
+    @for $i from 1 through 13{
+       .pocker-#{$classname}-#{$i}{
+        @if $classname=='spade'{ background-position:(-92px +-97px* (13-$i)) -20px;}
+        @else if $classname=='heart'{ background-position:(-92px +-97px* (13-$i)) -164px;}
+        @else if $classname=='diamond'{ background-position:(-92px +-97px* (13-$i)) -308px;}
+        @else if $classname=='club'{ background-position:(-92px +-97px* (13-$i)) -452px;}
+            border-radius: 5px;
+            position: relative;
+        }
+    }    
+}
+
+#pockerArea{
+    @include pockerStyle('spade');
+    @include pockerStyle('heart');
+    @include pockerStyle('diamond');
+    @include pockerStyle('club');
+}
+// .pocker-spade-13{
+//     background-position: -91px -20px;
+// }
+// .pocker-spade-12{
+//     background-position: -188px -20px;
+// }
+// .pocker-spade-11{
+//     background-position: -285px -20px;
+// }
