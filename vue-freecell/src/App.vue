@@ -29,7 +29,7 @@ export default {
   data() {
     return {
       pockerArr: [],
-      isShuffle: false,
+      isShuffle: false
     };
   },
   created() {
@@ -65,80 +65,80 @@ export default {
       }
     }
   },
-  computed:{
-    shufflePockerArr(){
-      this.isShuffle
-      let storage = ''
-      for(let x=0, maxLength = this.pockerArr.length; x <maxLength;x++){
-          let shuffleNum = Math.ceil(Math.random()*51)
-          for(let y=0, maxLength = this.pockerArr.length; y <maxLength;y++){
-            storage = this.pockerArr[shuffleNum]
-            this.pockerArr[shuffleNum] = this.pockerArr[y]
-            this.pockerArr[y] = storage
-          }
+  computed: {
+    shufflePockerArr() {
+      this.isShuffle;
+      let storage = "";
+      for (let x = 0, maxLength = this.pockerArr.length; x < maxLength; x++) {
+        let shuffleNum = Math.ceil(Math.random() * 51);
+        for (let y = 0, maxLength = this.pockerArr.length; y < maxLength; y++) {
+          storage = this.pockerArr[shuffleNum];
+          this.pockerArr[shuffleNum] = this.pockerArr[y];
+          this.pockerArr[y] = storage;
+        }
       }
-      return this.pockerArr
+      return this.pockerArr;
     },
-    firstPockerArr(){
-      return this.shufflePockerArr.filter((pocker,index)=>{
-        if(index <7){
-          return pocker
+    firstPockerArr() {
+      return this.shufflePockerArr.filter((pocker, index) => {
+        if (index < 7) {
+          return pocker;
         }
-      })
+      });
     },
-    secondPockerArr(){
-      return this.shufflePockerArr.filter((pocker,index)=>{
-        if(index>=7 && index<14){
-          return pocker
+    secondPockerArr() {
+      return this.shufflePockerArr.filter((pocker, index) => {
+        if (index >= 7 && index < 14) {
+          return pocker;
         }
-      })
+      });
     },
-    thirdPockerArr(){
-      return this.shufflePockerArr.filter((pocker,index)=>{
-        if(index>=14 && index<21){
-          return pocker
+    thirdPockerArr() {
+      return this.shufflePockerArr.filter((pocker, index) => {
+        if (index >= 14 && index < 21) {
+          return pocker;
         }
-      })
+      });
     },
-    forthPockerArr(){
-      return this.shufflePockerArr.filter((pocker,index)=>{
-        if(index>=21 && index<28){
-          return pocker
+    forthPockerArr() {
+      return this.shufflePockerArr.filter((pocker, index) => {
+        if (index >= 21 && index < 28) {
+          return pocker;
         }
-      })
+      });
     },
-    fifthPockerArr(){
-      return this.shufflePockerArr.filter((pocker,index)=>{
-        if(index>=28 && index<34){
-          return pocker
+    fifthPockerArr() {
+      return this.shufflePockerArr.filter((pocker, index) => {
+        if (index >= 28 && index < 34) {
+          return pocker;
         }
-      })
+      });
     },
-    sixthPockerArr(){
-      return this.shufflePockerArr.filter((pocker,index)=>{
-        if(index>=34 && index<40){
-          return pocker
+    sixthPockerArr() {
+      return this.shufflePockerArr.filter((pocker, index) => {
+        if (index >= 34 && index < 40) {
+          return pocker;
         }
-      })
+      });
     },
-    seventhPockerArr(){
-      return this.shufflePockerArr.filter((pocker,index)=>{
-        if(index>=40 && index<46){
-          return pocker
+    seventhPockerArr() {
+      return this.shufflePockerArr.filter((pocker, index) => {
+        if (index >= 40 && index < 46) {
+          return pocker;
         }
-      })
+      });
     },
-    eighthPockerArr(){
-      return this.shufflePockerArr.filter((pocker,index)=>{
-        if(index>=46 && index<52){
-          return pocker
+    eighthPockerArr() {
+      return this.shufflePockerArr.filter((pocker, index) => {
+        if (index >= 46 && index < 52) {
+          return pocker;
         }
-      })
+      });
     }
   },
-  methods:{
-    shufflePocker(){
-      this.isShuffle = !this.isShuffle
+  methods: {
+    shufflePocker() {
+      this.isShuffle = !this.isShuffle;
     }
   }
 };
@@ -152,7 +152,7 @@ body {
 }
 #pockerArea {
   display: flex;
-  .removeUp{
+  .removeUp {
     position: relative;
     top: -20px;
   }
