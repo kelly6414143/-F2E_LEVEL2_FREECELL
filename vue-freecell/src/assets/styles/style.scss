@@ -1,16 +1,16 @@
 .pocker{
-    width: 87px;
-    height: 133px;
+    height: 146px;
+    width: 96px;
     background:url(../image/freecell.png) no-repeat;
 }
 
 @mixin pockerStyle($classname) {
     @for $i from 1 through 13{
        .pocker-#{$classname}-#{$i}{
-        @if $classname=='spade'{ background-position:(-92px +-97px* (13-$i)) -20px;}
-        @else if $classname=='heart'{ background-position:(-92px +-97px* (13-$i)) -164px;}
-        @else if $classname=='diamond'{ background-position:(-92px +-97px* (13-$i)) -308px;}
-        @else if $classname=='club'{ background-position:(-92px +-97px* (13-$i)) -452px;}
+        @if $classname=='spade'{ background-position:(-28px +-107px* (13-$i)) -22px;}
+        @else if $classname=='heart'{ background-position:(-28px +-107px* (13-$i)) -180px;}
+        @else if $classname=='diamond'{ background-position:(-28px +-107px* (13-$i)) -339px;}
+        @else if $classname=='club'{ background-position:(-28px +-107px* (13-$i)) -496px;}
             border-radius: 5px;
             position: relative;
         }
